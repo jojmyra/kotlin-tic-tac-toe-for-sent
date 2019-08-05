@@ -1,4 +1,5 @@
 import kotlin.system.exitProcess
+
 var rowInt = 0
 var colInt = 0
 var turn = "X"
@@ -9,12 +10,12 @@ val table: Array<Array<String>> = arrayOf(
     arrayOf("0","-","-","-"),
     arrayOf("1","-","-","-"),
     arrayOf("2","-","-","-"))
-fun input() {
+fun board() {
     println("Wellcome to OX game")
     printTable()
     while (true){
         try {
-            print("Turn ${turn} Please input : ")
+            print("Turn ${taurn} Please input : ")
             val input: String? = readLine()
             val rcList: List<String>? = input?.split(" ")
             if (rcList?.size !=2 ) {
@@ -94,5 +95,5 @@ fun checkWinner(): String? {
     return null
 }
 fun main() {
-    input()
+    board()
 }
